@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@yield('title', 'SMA Dharma Karya')</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <link rel="icon" href="{{ asset('images/logo.png') }}" />
 </head>
 <body>
-    <nav class="navbar glass">
+    <nav class="navbar">
         <div class="container">
             <div class="logo-nav">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo SMA Dharma Karya" />
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" />
                 <span>SMA Dharma Karya</span>
             </div>
             <ul class="nav-links">
@@ -25,14 +25,10 @@
         </div>
     </nav>
 
-    <main class="main-content">
-        @yield('content')
-    </main>
+    <main>@yield('content')</main>
 
     <footer>
-        <div class="footer-content">
-            &copy; {{ date('Y') }} SMA Dharma Karya. All rights reserved.
-        </div>
+        &copy; {{ date('Y') }} SMA Dharma Karya. All rights reserved.
     </footer>
 
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -1,28 +1,28 @@
-// Smooth scroll untuk menu anchor
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            if (this.getAttribute('href') !== '#') {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
+document.addEventListener('DOMContentLoaded', () => {
+    // Slider function for prestasi and testimoni
+    function setupSlider(selector, interval = 3500) {
+        const slider = document.querySelector(selector);
+        if (!slider) return;
+
+        let slides = Array.from(slider.children);
+        let currentIndex = 0;
+
+        slides.forEach((slide, i) => {
+            slide.style.position = 'absolute';
+            slide.style.top = 0;
+            slide.style.left = 0;
+            slide.style.width = '100%';
+            slide.style.opacity = i === 0 ? '1' : '0';
+            slide.style.transition = 'opacity 0.5s ease';
         });
-    });
-});
 
-
-
-// Animasi fade-in section saat discroll
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
+        setInterval(() => {
+            slides[currentIndex].style.opacity = '0';
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].style.opacity = '1';
+        }, interval);
     }
-  });
-}, { threshold: 0.2 });
 
-sections.forEach(section => observer.observe(section));
+    setupSlider('.prestasi-slider');
+    setupSlider('.testimoni-slider');
+});
