@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Pindah ke root deploy (HARUS sudah di public_html)
-cd ~/public_html
+# (SUDAH di public_html, TIDAK PERLU cd lagi!)
 
 # Pindahkan file utama dari public ke root
 mv -f public/index.php ./
