@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    {{-- Navbar --}}
-    <nav class="navbar glass">
+    <nav class="navbar glass" id="navbar">
         <div class="logo">
             <img src="{{ asset('public/images/logo.png') }}" alt="Logo">
             <span>SMA Dharma Karya</span>
@@ -19,6 +18,7 @@
             <li><a href="#beranda">Beranda</a></li>
             <li><a href="#profil">Profil</a></li>
             <li><a href="#prestasi">Prestasi</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
             <li><a href="#kontak">Kontak</a></li>
         </ul>
     </nav>
