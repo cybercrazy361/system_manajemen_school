@@ -6,31 +6,32 @@
     <title>@yield('title') | SMA Dharma Karya</title>
     <link rel="stylesheet" href="{{ asset('public/css/app.css') }}">
     <script src="{{ asset('public/js/app.js') }}" defer></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Icon -->
-    <link rel="icon" href="{{ asset('images/favicon.ico') }}">
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="#" class="logo">SMA Dharma Karya</a>
-            <ul class="nav-links">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#profil">Profil</a></li>
-                <li><a href="#galeri">Galeri</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
+            <div class="container">
+                <a href="#beranda" class="logo">SMA Dharma Karya</a>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="nav-links">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-
     <main>
         @yield('content')
     </main>
-
     <footer>
-        <p>&copy; {{ date('Y') }} SMA Dharma Karya. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; {{ date('Y') }} SMA Dharma Karya. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
