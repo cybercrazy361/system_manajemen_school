@@ -8,7 +8,7 @@
 
     <!-- Banner -->
     <section class="banner-section" id="beranda">
-        <img class="banner-img" src="{{ asset('images/banner-brosur.png') }}" alt="Banner SMA DHARMA KARYA">
+        <img class="banner-img" src="{{ asset('images/banner-brosur.png') }}" alt="Banner SMA DHARMA KARYA" />
         <div class="hero-content">
             <h1>Selamat Datang di <span>SMA DHARMA KARYA</span></h1>
             <p>Mencetak Generasi Unggul di Era Digital dengan Kurikulum Masa Depan.</p>
@@ -20,7 +20,7 @@
     <section class="section" id="profil">
         <h2>Profil Sekolah</h2>
         <div class="content-flex">
-            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=400&q=80" alt="Gedung Sekolah">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=400&q=80" alt="Gedung Sekolah" />
             <div>
                 <p><b>SMA DHARMA KARYA</b> adalah sekolah modern berbasis teknologi, menyiapkan siswa untuk menghadapi era global dengan pembelajaran berbasis digital dan karakter mulia.</p>
                 <ul>
@@ -52,10 +52,10 @@
     <section class="section" id="galeri">
         <h2>Galeri Kegiatan</h2>
         <div class="galeri-grid">
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 1">
-            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 2">
-            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3a5c?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 3">
-            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 4">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 1" />
+            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 2" />
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3a5c?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 3" />
+            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=400&q=80" alt="Kegiatan 4" />
         </div>
     </section>
 
@@ -72,8 +72,8 @@
         <h2>Kontak Kami</h2>
         <div class="kontak-flex">
             <form class="kontak-form">
-                <input type="text" placeholder="Nama" required>
-                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Nama" required />
+                <input type="email" placeholder="Email" required />
                 <textarea placeholder="Pesan" rows="4" required></textarea>
                 <button type="submit">Kirim Pesan</button>
             </form>
