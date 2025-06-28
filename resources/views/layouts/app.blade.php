@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    {{-- Navbar --}}
     <nav class="navbar glass">
         <div class="logo">
-            <img src="{{ asset('public/images/logo.png') }}" alt="Logo SMA Dharma Karya">
+            <img src="{{ asset('public/images/logo.png') }}" alt="Logo">
             <span>SMA Dharma Karya</span>
         </div>
         <ul class="nav-links">

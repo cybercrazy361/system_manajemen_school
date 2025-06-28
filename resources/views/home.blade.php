@@ -5,12 +5,14 @@
 @section('content')
     <section class="hero-section" id="beranda">
         <canvas id="hero-bg"></canvas>
-        <div class="hero-content">
-            <h1><span>SMA DHARMA KARYA</span><br>Mengukir Masa Depan Digital</h1>
-            <p>Sekolah dengan ekosistem digital & teknologi masa depan, membentuk generasi emas Indonesia.</p>
-            <a href="#profil" class="cta-btn-glow">Lihat Profil Sekolah</a>
+        <div class="hero-flex">
+            <div class="hero-content">
+                <h1><span>SMA DHARMA KARYA</span><br>Mengukir Masa Depan Digital</h1>
+                <p>Sekolah dengan ekosistem digital & teknologi masa depan, membentuk generasi emas Indonesia.</p>
+                <a href="#profil" class="cta-btn-glow">Lihat Profil Sekolah</a>
+            </div>
+            <img class="hero-svg" src="{{ asset('public/images/hero-education.svg') }}" alt="Digital Illustration">
         </div>
-        <img class="hero-svg" src="{{ asset('public/images/hero-education.svg') }}" alt="Digital Illustration">
     </section>
 
     <section class="section" id="profil">
