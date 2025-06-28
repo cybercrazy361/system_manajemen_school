@@ -1,4 +1,4 @@
-// Simple Particle Background for Hero Section
+// Particle Effect for Hero Section
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById('hero-bg');
     if (!canvas) return;
@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function initParticles() {
         particles = [];
-        for (let i = 0; i < 60; i++) {
+        for (let i = 0; i < 66; i++) {
             particles.push({
                 x: Math.random() * w,
                 y: Math.random() * h,
-                r: Math.random() * 2.7 + 1.5,
-                d: Math.random() * 1.7 + 0.7,
-                vx: (Math.random() - 0.5) * 0.6,
-                vy: (Math.random() - 0.3) * 0.3
+                r: Math.random() * 2.7 + 1.3,
+                vx: (Math.random() - 0.5) * 0.45,
+                vy: (Math.random() - 0.3) * 0.25
             });
         }
     }
@@ -30,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let p of particles) {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, false);
-            ctx.fillStyle = "rgba(21, 87, 190, 0.17)";
-            ctx.shadowColor = "#1557be";
-            ctx.shadowBlur = 12;
+            ctx.fillStyle = "rgba(37, 182, 226, 0.14)";
+            ctx.shadowColor = "#25b6e2";
+            ctx.shadowBlur = 10;
             ctx.fill();
             ctx.closePath();
         }
