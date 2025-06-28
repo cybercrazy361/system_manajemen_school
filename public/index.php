@@ -11,11 +11,11 @@ if (file_exists($maintenance = __DIR__.'/../system_manajemen_school/storage/fram
 }
 
 // Register the Composer autoloader
-require __DIR__.'/../system_manajemen_school/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 // Bootstrap Laravel and handle the request
 /** @var Application $app */
-$app = require_once __DIR__.'/../system_manajemen_school/bootstrap/app.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
 
 $app->handleRequest(
     Request::capture()
