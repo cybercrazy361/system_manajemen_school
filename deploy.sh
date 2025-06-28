@@ -1,10 +1,12 @@
 #!/bin/bash
 
+# Jalankan script ini di root project hosting, misal: /domains/pakarguru.online/public_html
+
 # Pindahkan file utama dari public ke root
 mv -f public/index.php ./
 mv -f public/.htaccess ./
 
-# Pindahkan semua folder asset di public ke root (replace lama)
+# Replace semua asset lama di root
 for d in css js images storage; do
   if [ -d public/$d ]; then
     rm -rf $d
@@ -22,7 +24,7 @@ done
 # Hapus folder public kalau sudah kosong
 rmdir public 2>/dev/null || true
 
-# Edit index.php agar path vendor/bootstrap benar
+# Ganti path vendor/bootstrap di index.php (supaya bisa jalan di root)
 sed -i 's/..\/vendor/.\/vendor/g' index.php
 sed -i 's/..\/bootstrap/.\/bootstrap/g' index.php
 
