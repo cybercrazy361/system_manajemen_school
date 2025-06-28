@@ -11,14 +11,14 @@
         <a href="#profil" class="cta-btn">Lihat Profil Sekolah</a>
     </div>
     <div class="hero-img">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo Sekolah">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Sekolah" />
     </div>
 </section>
 
 <section class="section" id="profil">
     <h2>Profil Sekolah</h2>
     <div class="profil-content">
-        <img src="{{ asset('images/profil.jpg') }}" alt="Foto Sekolah" class="img-profil">
+        <img src="{{ asset('images/profil.jpg') }}" alt="Foto Sekolah" class="img-profil" />
         <div>
             <p>
                 <strong>SMA Dharma Karya</strong> adalah sekolah unggulan berbasis digital di Jakarta, berkomitmen membentuk generasi emas Indonesia dengan kurikulum masa depan, fasilitas modern, serta tenaga pendidik profesional.
@@ -47,7 +47,7 @@
     <h2>Testimoni Alumni</h2>
     <blockquote>
         <p>
-            “SMA Dharma Karya membuat saya siap menghadapi dunia perkuliahan dan karir. Lingkungannya suportif, guru-gurunya keren!”<br>
+            “SMA Dharma Karya membuat saya siap menghadapi dunia perkuliahan dan karir. Lingkungannya suportif, guru-gurunya keren!”<br />
             <span>- Rizky Putra, Mahasiswa UI</span>
         </p>
     </blockquote>
@@ -57,19 +57,13 @@
     <h2>Kontak & Lokasi</h2>
     <div class="kontak-info">
         <p>
-            <strong>Alamat:</strong> Jl. Contoh No. 123, Jakarta<br>
-            <strong>Telepon:</strong> (021) 12345678<br>
+            <strong>Alamat:</strong> Jl. Contoh No. 123, Jakarta<br />
+            <strong>Telepon:</strong> (021) 12345678<br />
             <strong>Email:</strong> info@pakarguru.online
         </p>
-        <iframe 
+        <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.44078955264!2d106.66470101548515!3d-6.229728018049864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1df2eaaea4b%3A0x728c0062b8f5700!2sJakarta!5e0!3m2!1sen!2sid!4v1689520000000!5m2!1sen!2sid"
-            width="300"
-            height="150"
-            style="border:0; border-radius:12px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+            width="300" height="150" style="border-radius:12px; border:none;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 @endsection

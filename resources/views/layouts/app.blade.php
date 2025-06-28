@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@yield('title', 'SMA Dharma Karya')</title>
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/logo.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+    <link rel="icon" href="{{ asset('images/logo.png') }}" />
 </head>
 <body>
     <nav class="navbar glass">
         <div class="container">
             <div class="logo-nav">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo SMA Dharma Karya" />
                 <span>SMA Dharma Karya</span>
             </div>
             <ul class="nav-links">
@@ -27,15 +24,17 @@
             </ul>
         </div>
     </nav>
+
     <main class="main-content">
         @yield('content')
     </main>
+
     <footer>
         <div class="footer-content">
             &copy; {{ date('Y') }} SMA Dharma Karya. All rights reserved.
         </div>
     </footer>
-    <!-- Main JS -->
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

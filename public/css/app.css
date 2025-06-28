@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
     --primary: #2a65d3;
     --secondary: #f7fafc;
@@ -5,6 +6,7 @@
     --font: 'Poppins', sans-serif;
 }
 
+/* Basic Reset & Body */
 body {
     margin: 0;
     font-family: var(--font);
@@ -12,6 +14,7 @@ body {
     color: #23272f;
 }
 
+/* Navbar */
 .navbar {
     background: #fff;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);
@@ -20,7 +23,6 @@ body {
     top: 0;
     z-index: 99;
 }
-
 .container {
     display: flex;
     align-items: center;
@@ -29,7 +31,6 @@ body {
     margin: auto;
     padding: 0 2rem;
 }
-
 .logo-nav {
     display: flex;
     align-items: center;
@@ -48,7 +49,6 @@ body {
     letter-spacing: 0.5px;
     color: var(--primary);
 }
-
 .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -67,6 +67,7 @@ body {
     color: var(--primary);
 }
 
+/* Hero Section */
 .hero {
     display: flex;
     align-items: center;
@@ -116,6 +117,7 @@ body {
     box-shadow: 0 1px 12px rgba(0,0,0,0.12);
 }
 
+/* Sections */
 .section {
     background: #fff;
     border-radius: 18px;
@@ -128,6 +130,8 @@ body {
     font-size: 2rem;
     margin-bottom: 1.4rem;
 }
+
+/* Profil Section */
 .profil-content {
     display: flex;
     align-items: flex-start;
@@ -139,10 +143,18 @@ body {
     box-shadow: 0 1px 10px 0 rgba(0,0,0,0.09);
     margin-bottom: 1rem;
 }
+.profil-content ul {
+    padding-left: 1.5rem;
+    font-size: 1.04rem;
+}
+
+/* Prestasi Section */
 .prestasi-list {
     padding-left: 1.5rem;
     font-size: 1.04rem;
 }
+
+/* Testimoni Section */
 blockquote {
     background: #f5f7fa;
     border-left: 4px solid var(--primary);
@@ -152,6 +164,8 @@ blockquote {
     color: #333;
     margin: 1.2rem 0 0 0;
 }
+
+/* Kontak Section */
 .kontak-info {
     display: flex;
     align-items: flex-start;
@@ -161,8 +175,10 @@ blockquote {
 }
 .kontak-info iframe {
     border-radius: 12px;
+    border: none;
 }
 
+/* Footer */
 footer {
     background: #23272f;
     color: #fff;
@@ -174,18 +190,24 @@ footer {
     border-radius: 18px 18px 0 0;
 }
 
-
 /* Responsive */
 @media (max-width: 900px) {
-    .container, .hero, .section {
+    .container,
+    .hero,
+    .section {
         flex-direction: column;
         max-width: 96vw;
         padding: 1.2rem;
         gap: 1.5rem;
     }
-    .hero-img img, .img-profil {max-width: 120px;}
-    .profil-content {flex-direction: column;}
-    .kontak-info {flex-direction: column;}
+    .hero-img img,
+    .img-profil {
+        max-width: 120px;
+    }
+    .profil-content {
+        flex-direction: column;
+    }
+    .kontak-info {
+        flex-direction: column;
+    }
 }
-
-
