@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# (SUDAH di public_html, TIDAK PERLU cd lagi!)
-
 # Pindahkan file utama dari public ke root
 mv -f public/index.php ./
 mv -f public/.htaccess ./
 
-# Pindahkan semua folder asset di public ke root
+# Pindahkan semua folder asset di public ke root (replace lama)
 for d in css js images storage; do
   if [ -d public/$d ]; then
+    rm -rf $d
     mv -f public/$d ./
   fi
 done
