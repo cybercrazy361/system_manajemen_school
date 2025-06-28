@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@yield('title', 'SMA DHARMA KARYA')</title>
-    
-    <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papZc05hrZrMQnOYsl7AAO1uhRUQvpDdL/tvpm37gNfjG3WqkItdq0zTJdX7qMBsH0q43MXO3FzDscX/2xz8Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-    
-    @stack('styles')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title') | SMA Dharma Karya</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}">
 </head>
 <body>
-    @yield('content')
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">SMA Dharma Karya</a>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- JS -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    @stack('scripts')
+    <main>
+        @yield('content')
+    </main>
+
+    <footer>
+        <p>&copy; {{ date('Y') }} SMA Dharma Karya. All rights reserved.</p>
+    </footer>
 </body>
 </html>
