@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+
 // Animasi fade-in section saat discroll
 const sections = document.querySelectorAll('.section');
 const observer = new IntersectionObserver((entries) => {
