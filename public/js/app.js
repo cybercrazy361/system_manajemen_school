@@ -1,52 +1,63 @@
-// Hamburger menu toggle (responsive)
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle?.addEventListener('change', function() {
-        if (this.checked) {
-            navLinks.style.display = 'flex';
-        } else {
-            navLinks.style.display = '';
+// Simple Particle Background for Hero Section
+document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById('hero-bg');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let w, h, particles;
+
+    function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = document.querySelector('.hero-section').offsetHeight || 440;
+    }
+
+    function initParticles() {
+        particles = [];
+        for (let i = 0; i < 60; i++) {
+            particles.push({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                r: Math.random() * 2.7 + 1.5,
+                d: Math.random() * 1.7 + 0.7,
+                vx: (Math.random() - 0.5) * 0.6,
+                vy: (Math.random() - 0.3) * 0.3
+            });
         }
-    });
+    }
 
-    // Smooth scroll
-    document.querySelectorAll('.nav-links a, .cta-btn').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 65,
-                        behavior: 'smooth'
-                    });
-                }
-                if (window.innerWidth < 769) {
-                    menuToggle.checked = false;
-                    navLinks.style.display = '';
-                }
-            }
-        });
-    });
+    function drawParticles() {
+        ctx.clearRect(0, 0, w, h);
+        for (let p of particles) {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, false);
+            ctx.fillStyle = "rgba(21, 87, 190, 0.17)";
+            ctx.shadowColor = "#1557be";
+            ctx.shadowBlur = 12;
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
 
-    // Fade in section on scroll
-    const sections = document.querySelectorAll('.section');
-    const fadeIn = () => {
-        const scrollY = window.scrollY + window.innerHeight;
-        sections.forEach(sec => {
-            if (scrollY > sec.offsetTop + 70) {
-                sec.style.opacity = 1;
-                sec.style.transform = "translateY(0px)";
-                sec.style.transition = "all .7s";
-            }
-        });
-    };
-    sections.forEach(sec => {
-        sec.style.opacity = 0;
-        sec.style.transform = "translateY(40px)";
-    });
-    window.addEventListener('scroll', fadeIn);
-    fadeIn();
+    function moveParticles() {
+        for (let p of particles) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+        }
+    }
+
+    function animate() {
+        drawParticles();
+        moveParticles();
+        requestAnimationFrame(animate);
+    }
+
+    function setup() {
+        resize();
+        initParticles();
+        animate();
+    }
+
+    window.addEventListener('resize', () => { resize(); initParticles(); });
+    setup();
 });
